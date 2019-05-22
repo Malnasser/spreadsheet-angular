@@ -1,37 +1,17 @@
 import { Component } from '@angular/core';
 
-export interface PeriodicElement {
-  A: string;
-  B: string;
-  C: string;
-  D: string;
-  E: string;
-  F: string;
-  G: string;
-  H: string;
-  I: string;
-  J: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-  {A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
-];
+let SHEET_DATA: SheetHeader[] = [
+  {position: 1, A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
+  {position: 2, A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
+  {position: 3, A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
+  {position: 4, A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
+  {position: 5, A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
+  {position: 6, A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
+  {position: 7, A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
+  {position: 8, A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
+  {position: 9, A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
+  {position: 10, A: undefined, B: undefined, C: undefined, D: undefined, E: undefined, F: undefined, G: undefined, H: undefined, I: undefined, J: undefined},
+]:
 
 @Component({
   selector: 'app-root',
@@ -39,5 +19,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'spreadsheet-project';
+   displayedColumns: string[] = ['position', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+   dataSource = ELEMENT_DATA;
 }
